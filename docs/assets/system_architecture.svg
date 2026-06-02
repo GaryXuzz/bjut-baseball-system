@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #111827; }
+      .layer-title { font: 700 18px Arial, sans-serif; fill: #111827; }
+      .label { font: 600 15px Arial, sans-serif; fill: #111827; }
+      .small { font: 13px Arial, sans-serif; fill: #374151; }
+      .box { fill: #ffffff; stroke: #334155; stroke-width: 2; rx: 8; }
+      .layer { fill: #f8fafc; stroke: #94a3b8; stroke-width: 2; rx: 12; }
+      .accent { fill: #fee2e2; stroke: #991b1b; stroke-width: 2; rx: 8; }
+      .api { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 8; }
+      .service { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 8; }
+      .db { fill: #fefce8; stroke: #a16207; stroke-width: 2; rx: 8; }
+      .arrow { stroke: #475569; stroke-width: 2.4; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text x="600" y="44" text-anchor="middle" class="title">BJUT Baseball System - Formal System Architecture</text>
+
+  <rect x="45" y="80" width="1110" height="95" class="layer"/>
+  <text x="65" y="112" class="layer-title">Users</text>
+  <rect x="260" y="105" width="260" height="45" class="box"/>
+  <text x="390" y="132" text-anchor="middle" class="label">General Users</text>
+  <rect x="680" y="105" width="260" height="45" class="accent"/>
+  <text x="810" y="132" text-anchor="middle" class="label">Administrators</text>
+
+  <rect x="45" y="205" width="1110" height="125" class="layer"/>
+  <text x="65" y="237" class="layer-title">Presentation Layer: Web Browser</text>
+  <rect x="95" y="260" width="180" height="42" class="box"/>
+  <text x="185" y="286" text-anchor="middle" class="small">Home Dashboard</text>
+  <rect x="300" y="260" width="180" height="42" class="box"/>
+  <text x="390" y="286" text-anchor="middle" class="small">Players Page</text>
+  <rect x="505" y="260" width="180" height="42" class="box"/>
+  <text x="595" y="286" text-anchor="middle" class="small">Statistics Page</text>
+  <rect x="710" y="260" width="180" height="42" class="box"/>
+  <text x="800" y="286" text-anchor="middle" class="small">Matchup Page</text>
+  <rect x="915" y="260" width="180" height="42" class="accent"/>
+  <text x="1005" y="286" text-anchor="middle" class="small">Admin Pages</text>
+
+  <rect x="45" y="360" width="1110" height="150" class="layer"/>
+  <text x="65" y="392" class="layer-title">Application Layer: Backend Application</text>
+  <rect x="105" y="420" width="190" height="48" class="service"/>
+  <text x="200" y="449" text-anchor="middle" class="small">Route Controllers</text>
+  <rect x="325" y="420" width="190" height="48" class="service"/>
+  <text x="420" y="449" text-anchor="middle" class="small">Authentication</text>
+  <rect x="545" y="420" width="190" height="48" class="service"/>
+  <text x="640" y="449" text-anchor="middle" class="small">Player Management</text>
+  <rect x="765" y="420" width="190" height="48" class="service"/>
+  <text x="860" y="449" text-anchor="middle" class="small">Game Records</text>
+  <rect x="985" y="420" width="130" height="48" class="service"/>
+  <text x="1050" y="449" text-anchor="middle" class="small">Schema Page</text>
+
+  <rect x="45" y="540" width="1110" height="90" class="layer"/>
+  <text x="65" y="572" class="layer-title">API Services</text>
+  <rect x="120" y="585" width="160" height="34" class="api"/>
+  <text x="200" y="607" text-anchor="middle" class="small">Player APIs</text>
+  <rect x="320" y="585" width="160" height="34" class="api"/>
+  <text x="400" y="607" text-anchor="middle" class="small">Game APIs</text>
+  <rect x="520" y="585" width="160" height="34" class="api"/>
+  <text x="600" y="607" text-anchor="middle" class="small">Stats APIs</text>
+  <rect x="720" y="585" width="160" height="34" class="api"/>
+  <text x="800" y="607" text-anchor="middle" class="small">Matchup APIs</text>
+  <rect x="920" y="585" width="160" height="34" class="api"/>
+  <text x="1000" y="607" text-anchor="middle" class="small">Schema Page</text>
+
+  <rect x="45" y="660" width="1110" height="70" class="layer"/>
+  <text x="65" y="692" class="layer-title">Database Layer: Relational Database</text>
+  <rect x="345" y="677" width="510" height="38" class="db"/>
+  <text x="600" y="701" text-anchor="middle" class="small">Players, Positions, Game Records, Profiles, Users</text>
+
+  <path d="M390 150 L390 260" class="arrow"/>
+  <path d="M810 150 L1005 260" class="arrow"/>
+  <path d="M595 302 L595 420" class="arrow"/>
+  <path d="M200 468 L200 585" class="arrow"/>
+  <path d="M420 468 L400 585" class="arrow"/>
+  <path d="M640 468 L600 585" class="arrow"/>
+  <path d="M860 468 L800 585" class="arrow"/>
+  <path d="M1050 468 L1000 585" class="arrow"/>
+  <path d="M600 619 L600 677" class="arrow"/>
+</svg>

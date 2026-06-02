@@ -1,0 +1,4 @@
+bin/
+sources.txt
+*.log
+.DS_Store

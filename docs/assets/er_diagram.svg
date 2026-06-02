@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="920" viewBox="0 0 1300 920">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #111827; }
+      .entity { fill: #ffffff; stroke: #1f2937; stroke-width: 2; rx: 8; }
+      .header { fill: #1f2937; }
+      .header-text { font: 700 16px Arial, sans-serif; fill: #ffffff; }
+      .attr { font: 13px Arial, sans-serif; fill: #111827; }
+      .key { font: 700 13px Arial, sans-serif; fill: #991b1b; }
+      .rel { stroke: #334155; stroke-width: 2.2; fill: none; }
+      .card { font: 700 13px Arial, sans-serif; fill: #334155; }
+      .note { font: 13px Arial, sans-serif; fill: #475569; }
+    </style>
+  </defs>
+
+  <rect width="1300" height="920" fill="#ffffff"/>
+  <text x="650" y="42" text-anchor="middle" class="title">BJUT Baseball System - ER Diagram</text>
+
+  <g id="players">
+    <rect x="470" y="80" width="360" height="230" class="entity"/>
+    <rect x="470" y="80" width="360" height="36" class="header"/>
+    <text x="650" y="104" text-anchor="middle" class="header-text">PLAYERS</text>
+    <text x="490" y="140" class="key">PK id</text>
+    <text x="490" y="162" class="attr">name</text>
+    <text x="490" y="184" class="attr">jersey_number</text>
+    <text x="490" y="206" class="attr">primary_position</text>
+    <text x="490" y="228" class="attr">is_pitcher</text>
+    <text x="490" y="250" class="attr">birth_date</text>
+    <text x="490" y="272" class="attr">join_date</text>
+    <text x="490" y="294" class="attr">contact_phone</text>
+  </g>
+
+  <g id="positions">
+    <rect x="70" y="380" width="260" height="140" class="entity"/>
+    <rect x="70" y="380" width="260" height="36" class="header"/>
+    <text x="200" y="404" text-anchor="middle" class="header-text">POSITIONS</text>
+    <text x="90" y="440" class="key">PK id</text>
+    <text x="90" y="462" class="key">UK name</text>
+    <text x="90" y="484" class="attr">description</text>
+  </g>
+
+  <g id="player_positions">
+    <rect x="470" y="390" width="360" height="130" class="entity"/>
+    <rect x="470" y="390" width="360" height="36" class="header"/>
+    <text x="650" y="414" text-anchor="middle" class="header-text">PLAYER_POSITIONS</text>
+    <text x="490" y="450" class="key">PK, FK player_id</text>
+    <text x="490" y="472" class="key">PK, FK position_id</text>
+  </g>
+
+  <g id="users">
+    <rect x="970" y="80" width="260" height="160" class="entity"/>
+    <rect x="970" y="80" width="260" height="36" class="header"/>
+    <text x="1100" y="104" text-anchor="middle" class="header-text">USERS</text>
+    <text x="990" y="140" class="key">PK id</text>
+    <text x="990" y="162" class="key">UK username</text>
+    <text x="990" y="184" class="attr">password_hash</text>
+    <text x="990" y="206" class="attr">is_admin</text>
+    <text x="990" y="228" class="attr">created_at</text>
+  </g>
+
+  <g id="fielder_profiles">
+    <rect x="70" y="610" width="330" height="240" class="entity"/>
+    <rect x="70" y="610" width="330" height="36" class="header"/>
+    <text x="235" y="634" text-anchor="middle" class="header-text">FIELDER_PROFILES</text>
+    <text x="90" y="670" class="key">PK, FK player_id</text>
+    <text x="90" y="692" class="attr">at_bats_total, hits_total, runs_total</text>
+    <text x="90" y="714" class="attr">rbi_total, walks_total, strikeouts</text>
+    <text x="90" y="736" class="attr">doubles, triples, home_runs</text>
+    <text x="90" y="758" class="attr">total_bases, stolen_bases</text>
+    <text x="90" y="780" class="attr">errors_fielding, passed_balls</text>
+    <text x="90" y="802" class="attr">batting_average</text>
+    <text x="90" y="824" class="attr">on_base_percentage</text>
+    <text x="90" y="846" class="attr">slugging_percentage, ops</text>
+  </g>
+
+  <g id="game_records">
+    <rect x="485" y="610" width="330" height="240" class="entity"/>
+    <rect x="485" y="610" width="330" height="36" class="header"/>
+    <text x="650" y="634" text-anchor="middle" class="header-text">GAME_RECORDS</text>
+    <text x="505" y="670" class="key">PK id</text>
+    <text x="505" y="692" class="key">FK player_id</text>
+    <text x="505" y="714" class="attr">game_date, opponent</text>
+    <text x="505" y="736" class="attr">is_pitching_record</text>
+    <text x="505" y="758" class="attr">batting fields: at_bats, hits, RBI</text>
+    <text x="505" y="780" class="attr">pitching fields: innings, earned_runs</text>
+    <text x="505" y="802" class="attr">fielding fields: errors, passed_balls</text>
+    <text x="505" y="824" class="attr">result fields: win, loss, save</text>
+  </g>
+
+  <g id="pitcher_profiles">
+    <rect x="900" y="610" width="330" height="240" class="entity"/>
+    <rect x="900" y="610" width="330" height="36" class="header"/>
+    <text x="1065" y="634" text-anchor="middle" class="header-text">PITCHER_PROFILES</text>
+    <text x="920" y="670" class="key">PK, FK player_id</text>
+    <text x="920" y="692" class="attr">innings_pitched_total</text>
+    <text x="920" y="714" class="attr">hits_allowed_total</text>
+    <text x="920" y="736" class="attr">runs_allowed_total</text>
+    <text x="920" y="758" class="attr">earned_runs_total</text>
+    <text x="920" y="780" class="attr">walks_allowed_total, strikeouts_total</text>
+    <text x="920" y="802" class="attr">pitches, strikes, wild_pitches</text>
+    <text x="920" y="824" class="attr">era, whip, strike_percentage</text>
+  </g>
+
+  <path d="M470 455 L330 455" class="rel"/>
+  <text x="352" y="445" class="card">N</text>
+  <text x="432" y="445" class="card">N</text>
+  <text x="340" y="478" class="note">assigned through</text>
+
+  <path d="M650 310 L650 390" class="rel"/>
+  <text x="662" y="334" class="card">1</text>
+  <text x="662" y="376" class="card">N</text>
+
+  <path d="M570 310 L255 610" class="rel"/>
+  <text x="548" y="328" class="card">1</text>
+  <text x="270" y="596" class="card">1</text>
+
+  <path d="M650 310 L650 610" class="rel"/>
+  <text x="662" y="334" class="card">1</text>
+  <text x="662" y="596" class="card">N</text>
+
+  <path d="M730 310 L1045 610" class="rel"/>
+  <text x="748" y="328" class="card">1</text>
+  <text x="1010" y="596" class="card">0..1</text>
+
+  <text x="650" y="885" text-anchor="middle" class="note">PLAYERS connects to POSITIONS through PLAYER_POSITIONS; one player has many game records, one fielder profile, and optionally one pitcher profile.</text>
+</svg>
